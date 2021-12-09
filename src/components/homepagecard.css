@@ -1,0 +1,35 @@
+.home-cards {
+    transition: transform 300ms ease;
+}
+
+.home-cards:hover ~ .home-cards {
+    transform: translateX(62px);
+}
+
+.home-cards:not(:first-child) {
+    margin-left: -95px;
+}
+
+.btn-link1,
+.btn-link2 {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px 0;
+    color: #3d405b;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.btn-link1 {
+    background-color: #f2cc8f;
+}
+.btn-link1:hover {
+    background-color: #e6c084;
+}
+.btn-link2 {
+    border: 2px solid #f2cc8f;
+}
+.btn-link2:hover {
+    background-color: hsla(37, 79%, 75%, 0.2);
+}

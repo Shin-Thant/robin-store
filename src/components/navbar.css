@@ -1,0 +1,16 @@
+#cart-btn-container {
+    position: relative;
+}
+#cart-tag {
+    width: max-content;
+    background-color: #f2cc8f;
+    color: #7cb083;
+    padding: 0px 5px;
+    position: absolute;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 50%;
+    top: 0;
+    right: -20px;
+    transform: translate(-50%, -50%);
+}
