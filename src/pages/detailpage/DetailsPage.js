@@ -31,7 +31,6 @@ export const DetailsPage = () => {
     const { data } = useQuery("getAllProducts", getAllProductsRequest, {
         staleTime: 60000,
     });
-    data?.length && console.log(data);
 
     // const [rating, setRating] = useState({});
 
@@ -49,11 +48,6 @@ export const DetailsPage = () => {
         }
         // eslint-disable-next-line
     }, [product?.category]);
-
-    useEffect(() => {
-        console.log(category);
-        // eslint-disable-next-line
-    }, [category]);
 
     const toast = useToast();
     const addtoCartHandler = () => {
@@ -101,14 +95,16 @@ export const DetailsPage = () => {
         setQuantity(quantity + 1);
     };
 
-    // console.log(product.rating);
-
     return (
-        <Flex mb="40px" width="100%" mx="auto">
+        <Flex mb="40px" width="100%">
             {loading ? (
                 <Loading />
             ) : (
-                <Flex direction="column" mt={{ base: "4rem", md: "5rem" }}>
+                <Flex
+                    direction="column"
+                    mt={{ base: "4rem", md: "5rem" }}
+                    width="100%"
+                >
                     <Flex
                         justify="space-evenly"
                         width={{
@@ -132,7 +128,7 @@ export const DetailsPage = () => {
                             justify="center"
                             height="max-content"
                             py="2rem"
-                            px={{ md: "2rem", lg: "0" }}
+                            px="0"
                             borderRadius="10px"
                             transition="all 300ms ease"
                             mx="auto"
@@ -380,7 +376,6 @@ export const DetailsPage = () => {
                                             />
                                         );
                                     }
-                                    return "done";
                                 })}
                             </Flex>
                         ) : (
